@@ -1,0 +1,9 @@
+{
+  "presets": ["env", "react-app", "stage-0"],
+  "plugins": [
+    "transform-class-properties",
+    ["module-resolver", {
+      "root": ["./src"]
+    }]
+  ]
+}
