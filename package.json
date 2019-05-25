@@ -7,7 +7,8 @@
     "test": "jest",
     "test:watch": "jest --watchAll",
     "start": "parcel index.html -p 3000 --open",
-    "build": "parcel build src/index.js"
+    "build": "parcel build src/index.js",
+    "deploy": "rm -rf dist/ && yarn build && NODE_DEBUG=gh-pages gh-pages -d dist"
   },
   "author": "Tetiana Platonova",
   "license": "MIT",
