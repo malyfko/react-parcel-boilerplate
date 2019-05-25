@@ -1,11 +1,13 @@
 import React from 'react';
-import store from 'store';
 import { Provider } from 'react-redux';
 import {
   BrowserRouter,
   Switch,
   Route,
 } from 'react-router-dom';
+
+import store from 'store';
+import { Home } from 'components/Home';
 
 const NoMatch = () => (
   <div>
@@ -17,6 +19,7 @@ const App = () => (
   <BrowserRouter>
     <Provider store={store}>
       <Switch>
+        <Route path="/" exact component={Home} />
         <Route component={NoMatch} />
       </Switch>
     </Provider>
